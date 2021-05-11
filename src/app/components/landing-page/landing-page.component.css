@@ -1,0 +1,40 @@
+*{
+    text-align: center;
+}
+.input-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+}
+
+.login-button {
+    height: 7vh;
+}
+
+.login-button-image {
+    height: 12vh;
+}
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+.alert-container {
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    height: 5vh;
+}
+
+.alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+    width: 30vw;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 10px;
+}

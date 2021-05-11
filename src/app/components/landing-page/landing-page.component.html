@@ -1,0 +1,22 @@
+<header>
+    <div>
+        <h1>Pokemon Trainer</h1>
+
+        <img src="../../../assets/images/pokemon.png" width="40%" alt="pokemon logo" />
+
+        <p>Train pokemons and pick what you like...</p>
+
+        <div class="input-field">
+            <input type="text" placeholder="Enter your name as a User" (keyup.enter)="onLogin(username)"
+                [formControl]="username" required />
+        </div>
+        <div class="login-button" (click)="onLogin(username)">
+            <img class="login-button-image" src="../../../assets/images/LoginButton.png" alt="login button" />
+        </div>
+        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert-container">
+            <div class="alert" *ngIf="username.errors?.required">
+                Name is required.
+            </div>
+        </div>
+    </div>
+</header>

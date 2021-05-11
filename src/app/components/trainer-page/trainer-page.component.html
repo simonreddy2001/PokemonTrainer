@@ -1,0 +1,33 @@
+<app-nav-bar></app-nav-bar>
+<div class="dashboard">
+
+    <h1>Trainer Page</h1>
+
+    <div *ngIf="pokemonCollection == null; else elseBlock">
+        <p> Hello, {{ trainerName }}! You don't have any pokemons now. Go to Pokemon Catalogue to find dream pokemons.
+        </p>
+        <a class="catalogue-link" routerLink="/pokemons">Catalogue</a>
+    </div>
+
+    <ng-template #elseBlock>
+        <h2> Hello, {{ trainerName }}!</h2>
+        <p>Here are your collected pokemons</p>
+        <div class="row">
+            <div *ngFor="let myPokemon of pokemonCollection">
+                <a class="column" routerLink="/pokemons/{{myPokemon.id}}">
+                    <h4>{{ myPokemon.name.substring(0,1).toUpperCase()+myPokemon.name.substring(1) }}</h4>
+                    <img [src]="myPokemon.sprites.front_default" [alt]="myPokemon.name" />
+                </a>
+            </div>
+
+        </div>
+    </ng-template>
+
+    <div>
+        <button (click)="logout()" class="logout-button">
+            Log Out
+        </button>
+    </div>
+
+
+</div>

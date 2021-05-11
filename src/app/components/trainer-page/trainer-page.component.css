@@ -1,0 +1,53 @@
+*{
+    text-align: center;
+}
+.dashboard {
+    padding-top: 3vh;
+    height: 80vh;
+}
+
+.catalogue-link:visited {
+    color: #000;
+}
+
+.logout-button{
+    display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color:black;
+  background-color: rgb(33, 108, 151);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(25, 80, 105);
+}
+.logout-button:hover {
+    cursor: pointer;
+    background-color: rgb(29, 68, 90);
+}
+
+a:visited {
+    color: rgb(231, 15, 15);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }

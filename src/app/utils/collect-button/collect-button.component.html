@@ -1,0 +1,9 @@
+<div *ngIf="checkIfCollected(); else elseBlock">
+    <p class="alert-field">You have already this pokemon.</p>
+</div>
+
+<ng-template #elseBlock>
+    <button class="collect-button" (click)="collect(pokemon)">
+        Collect
+    </button>
+</ng-template>
